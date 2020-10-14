@@ -1,11 +1,12 @@
 {{#each this}}
 <li>
     <h1>Город: {{name}}</h1>
-    <h2 class="dtJs">Дата: {{time}} </h2>
-    <p class="sunriseJs">Восход солнца: </p>
-    <p class="sunsetJs">Закат солнца: </p>
+    <h2 class="dtJs">Дата: {{dtNow}}</h2>
+    <p class="sunriseJs">Восход солнца: {{sys.sunriseNew}} ч.</p>
+    <p class="sunsetJs">Закат солнца: {{sys.sunsetNew}} ч.</p>
+    <p>Длительность солцестояния: {{sys.longDay}} ч.</p>
     <p>Давление: {{main.pressure}} мм.рт.ст</p>
-    <p>Температура: {{main.temp}}C</p>
+    <p>Температура: {{main.temp}} &degC</p>
     <p>Влажность: {{main.humidity}} %</p>
     <img src='https://openweathermap.org/img/w/{{weather.0.icon}}.png' alt="{{weather.main}}">
     <p>Скорость ветра: {{wind.speed}} м/с</p>
